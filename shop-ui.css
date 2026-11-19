@@ -1,0 +1,44 @@
+/* Shop look (clean cards, soft borders, accent pills). Used by Store, Community, Owner, Admin. */
+html[data-mode=light]:root{--bg:#f6f7f7;--card:#fff;--chip:#f0f2f2;--line:#e7eaea;--ink:#171a1a;--soft:#6f7777}
+html[data-mode=dark]:root{--bg:#0d1111;--card:#151a1a;--chip:#1d2424;--line:#273030;--ink:#eef2f2;--soft:#93a0a0}
+:root{--bad:#dc2626;--ok:#16a34a}
+html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif!important;-webkit-font-smoothing:antialiased}
+body{background:var(--bg)!important;color:var(--ink);font-size:14px}
+*{transition:background-color .15s,border-color .15s,color .15s,box-shadow .15s}
+.ic{display:inline-flex;vertical-align:-.22em;flex-shrink:0}
+.ic svg{width:1.15em;height:1.15em;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.ic.fl svg{fill:currentColor}
+button{font-family:inherit;-webkit-tap-highlight-color:transparent;cursor:pointer}button:active{transform:scale(.97)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input,textarea,select{font:inherit;font-size:15px;border:1px solid var(--line)!important;border-radius:12px!important;background:var(--card)!important;color:var(--ink)!important}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--accent)!important;box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+label{font-size:12px;font-weight:700;color:var(--soft)}
+header{background:color-mix(in srgb,var(--card) 92%,transparent)!important;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)!important}
+header h1{font-weight:800}
+/* icon buttons: bordered rounded squares */
+.ib,.back,.sb{width:42px!important;height:42px!important;border:1px solid var(--line)!important;border-radius:12px!important;background:var(--card)!important;color:var(--ink)!important;display:inline-flex!important;align-items:center;justify-content:center;font-size:19px;padding:0;flex-shrink:0}
+.ib:hover,.back:hover{background:var(--chip)!important}
+.logo,.av{background:var(--accent)!important;color:var(--on)!important}
+/* cards */
+.card,.p,.sc,.panel,.stat,.oc,.pr{background:var(--card)!important;border:1px solid var(--line)!important;border-radius:18px!important;box-shadow:0 2px 12px rgba(15,23,23,.05)!important}
+.inf{background:var(--chip)!important;border:0!important;border-radius:12px!important;padding:11px 13px;margin-bottom:8px}
+/* buttons */
+.add,.btn,.pri,.row .go,#bar button,.kt-x,.b.on{background:var(--accent)!important;color:var(--on)!important;border:0!important;border-radius:14px!important;font-weight:700;box-shadow:0 6px 16px color-mix(in srgb,var(--accent) 24%,transparent)}
+.row button:not(.go),.btn.alt,.b:not(.on){background:var(--chip);color:var(--ink);border:0;border-radius:14px;box-shadow:none;font-weight:700}
+.row button,.btn,.b,.add{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+/* tabs / chips */
+.chip,.cats .chip,.chips .chip{border:1px solid var(--line)!important;background:var(--card)!important;color:var(--ink)!important;border-radius:99px!important;padding:8px 14px!important;font-weight:600!important;display:inline-flex;align-items:center;gap:6px}
+.chip.on,.cats .chip.on,.chips .chip.on{background:var(--accent)!important;color:var(--on)!important;border-color:var(--accent)!important}
+.tag{background:var(--chip)!important;color:var(--ink)!important;border-radius:99px!important;padding:3px 10px!important}
+.ov{backdrop-filter:blur(3px)}
+.sheet,.kt-sh{background:var(--card)!important;border-radius:22px 22px 0 0!important}
+@media(min-width:600px){.sheet,.kt-sh{border-radius:22px!important}}
+.toast{background:var(--ink)!important;color:var(--bg)!important;border-radius:99px!important}
+.empty{color:var(--soft)}
+.stars{display:inline-flex;gap:2px;color:#f59e0b}.stars .ic svg{width:14px;height:14px}
+/* community nav: icon rail like the store */
+nav{background:var(--card)!important;border-color:var(--line)!important}
+nav button{color:var(--soft)!important;border-radius:14px!important}
+nav button.on{color:var(--accent)!important;background:color-mix(in srgb,var(--accent) 13%,transparent)!important}
+nav button i{font-style:normal;display:inline-flex;font-size:22px}
+aside{background:var(--card)!important}aside button.on{background:var(--accent)!important;color:var(--on)!important}
